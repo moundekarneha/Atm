@@ -15,6 +15,10 @@ SQL-(SQL management studio 2014) and
 Frontend-
 (IDE- Visual Studio-2019)
 
+Start Login-
+Account Number-101
+Pin Number-101
+
 Hi everyone, I am a software engineer working in a company from last few months.
 I am inclined to learn new technologies and programming languages. 
 Currently started learning .NET framework.
