@@ -24,4 +24,5 @@ I am inclined to learn new technologies and programming languages.
 Currently started learning .NET framework.
 As a part of my learning skills I have posted few projects.
 Here I have posted ATM mini project.
-I you are egar to learn then please go and check.
+If you are egar to learn then please go and check.
+Thanks for visiting!!
