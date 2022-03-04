@@ -3,8 +3,11 @@ Project Description-
 Created generalised view of ATM software. Where user can login and check balance. 
 Also able to do a transaction like deposite, withdraw, transfer money to another account.
 
-Technology Stack- C# (Windows Form)language, .NET framework, SQL database.
-Created application using SQL-(SQL management studio 2014) and Frontend-(IDE- Visual Studio-2019)
+Technology Stack- 
+C# (Windows Form)language, .NET framework, SQL database.
+Created application using -
+Backend-SQL-(SQL management studio 2014) and
+Frontend-(IDE- Visual Studio-2019)
 
 Hi everyone, I am a software engineer working in a company from last few months.
 I am inclined to learn new technologies and programming languages. 
