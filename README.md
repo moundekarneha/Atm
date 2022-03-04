@@ -4,7 +4,7 @@ Project Description-
 Created generalised view of ATM software. Where user can login and check balance. 
 Also able to do a transaction like deposite, withdraw, transfer money to another account.
 
-Technology Stack- 
+Technological Stack- 
 
 C# (Windows Form)language, .NET framework, SQL database.
 Created application using -
