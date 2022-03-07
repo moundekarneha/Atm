@@ -45,6 +45,7 @@ namespace Atm
                         MessageBox.Show("Amount Paid");
                         txtAmount.Text = "";
                         txtBillNum.Text = "";
+                        txtDueDate.Text = "";
                     }
                 }
                 else
@@ -57,6 +58,7 @@ namespace Atm
                 MessageBox.Show("Insufficient Funds");
                 txtBillNum.Text = "";
                 txtAmount.Text = "";
+                txtDueDate.Text = "";
             }
         }
 
@@ -76,6 +78,7 @@ namespace Atm
                 {
                     int billAmount = globalClass.GetBillAmnt("Mseb");
                     txtAmount.Text = billAmount.ToString();
+                    txtDueDate.Text = GlobalClass.dueDateDisp;
                 }
                 else
                 {

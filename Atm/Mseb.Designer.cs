@@ -37,6 +37,8 @@ namespace Atm
             this.txtBillNum = new System.Windows.Forms.TextBox();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDueDate = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -53,9 +55,9 @@ namespace Atm
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(198, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Enter Amount";
+            this.label2.Text = "Amount";
             // 
             // btnShow
             // 
@@ -69,7 +71,7 @@ namespace Atm
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(201, 211);
+            this.btnPay.Location = new System.Drawing.Point(194, 243);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(75, 23);
             this.btnPay.TabIndex = 1;
@@ -79,7 +81,7 @@ namespace Atm
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(399, 211);
+            this.btnBack.Location = new System.Drawing.Point(392, 243);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 1;
@@ -111,11 +113,29 @@ namespace Atm
             this.label3.TabIndex = 12;
             this.label3.Text = "MSEB Transaction";
             // 
+            // txtDueDate
+            // 
+            this.txtDueDate.Location = new System.Drawing.Point(293, 191);
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.Size = new System.Drawing.Size(100, 20);
+            this.txtDueDate.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(198, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Due Date";
+            // 
             // Mseb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDueDate);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtBillNum);
@@ -140,5 +160,7 @@ namespace Atm
         public System.Windows.Forms.Button btnPay;
         public System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtDueDate;
+        public System.Windows.Forms.Label label4;
     }
 }
