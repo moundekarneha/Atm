@@ -12,6 +12,7 @@ namespace Atm.DBOperations
     public class GlobalClass
     {
         public static string accountNum;
+        public static string dueDateDisp;
         //runnonquey function-insert update delete
         public void RunNonQuery(string strsql)
         {
@@ -106,19 +107,30 @@ namespace Atm.DBOperations
             sqlConnection.Close();
             return billStatus;
         }
+
         //show button return bill amount
         public int GetBillAmnt(string accountHolder)
         {
             SqlConnection sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = ConfigurationManager.AppSettings["cnstr"];
             sqlConnection.Open();
-            string strsql = "select b.BillAmount from Bill b inner join LoginTable l on b.LoginId=l.LoginId where AcccountHolder='"+ accountHolder+ "'";
+            string strsql = "select b.BillAmount,b.DueDate from Bill b inner join LoginTable l on b.LoginId=l.LoginId where AcccountHolder='"+ accountHolder+ "'";
             SqlCommand sqlCommand = new SqlCommand(strsql, sqlConnection);
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
             int billAmount = 0;
+            DateTime dueDate;
+            DateTime todaysDate= Convert.ToDateTime(DateTime.Now.ToShortDateString());
             while(sqlDataReader.Read())
             {
-                billAmount = int.Parse(sqlDataReader[0].ToString());
+                dueDate =Convert.ToDateTime(sqlDataReader[1].ToString());
+                dueDateDisp = dueDate.ToShortDateString();
+                int res = DateTime.Compare(dueDate,todaysDate);
+                if(res<0)
+                    billAmount = int.Parse(sqlDataReader[0].ToString())+10;
+                if(res>0)
+                    billAmount = int.Parse(sqlDataReader[0].ToString()) + 10;
+                if (res == 0)
+                    billAmount = int.Parse(sqlDataReader[0].ToString());
             }
             sqlConnection.Close();
             return billAmount;
